@@ -1,0 +1,28 @@
+// Misc Colours
+$white:#fff;
+
+// Colour Scheme
+$gallery:#f0f1ee;
+$mine-shaft:(darken(#333332, 15%));
+$tory-blue:(lighten(#1352a2, 0%));
+$grey:#c5cbd3;
+$pastel-red:(lighten(#fb6964, 0%));
+
+// Spacing
+$spacing-amount:.8em;
+$margin:$spacing-amount;
+$margin-top:$spacing-amount 0 0;
+$margin-bottom:0 0 $spacing-amount;
+$margin-top-bottom:$spacing-amount 0;
+$padding:$spacing-amount;
+$padding-bottom:0 0 $spacing-amount;
+$padding-top:$spacing-amount 0 0;
+$padding-top-bottom:$spacing-amount 0;
+
+// Fonts
+$primary-font: 'Open Sans', sans-serif;
+
+// Misc
+$dark-border: 1px solid $mine-shaft;
+
+

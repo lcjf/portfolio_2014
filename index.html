@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>My first AngularJS app</title>
+    <meta name="description" content="My first AngularJS app">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="/app_stylesheets/style.css" media="screen, projection " rel="stylesheet" type="text/css" />
+    <link href="/app_stylesheets/screen.css" media="screen, projection " rel="stylesheet" type="text/css" />
+    <link href="/app_stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+</head>
+<body>
+<header>
+    <h1>Compass: Making shit easier with Compass and SCSS</h1>
+    <p>A brief example of how you can utlise this CSS Authoring Framework to your advantage</p>
+    <span>- </span><cite>Luke</cite>
+</header>
+    <section class="gradient">
+        <h2>Gradients</h2>
+        <p>A linear gradient is just one example, this will also generate all the necessary vendor prefixes.</p>
+        <div class="example">Example</div>
+        <pre class="prettyprint">@include background-image(linear-gradient($mine-shaft, $mine-shaft - 100));</pre>
+    </section>
+    <section class="border-radius">
+        <h2>Border Radius</h2>
+        <p>Quite an obvious one; using this include will automatically generate all the necessary vendor prefixes when using border-radius.</p>
+        <div class="example">Example</div>
+        <pre class="prettyprint">@include border-radius(5px);</pre>
+    </section>
+    <section class="transition">
+        <h2>Transitions</h2>
+        <p>This is a huge time saver considering the amount of vendor prefixes that are required. The example below fades in all properties, using the 'ease-in' transition, over the space of 200ms.</p>
+        <div class="example">Example</div>
+        <pre class="prettyprint">
+@include transition-property(all);
+@include transition-duration(.2s);
+@include transition-timing-function(ease-in);
+&:hover {
+    color: $mine-shaft - 100;
+    background: darken($golden-rod, 15%);
+}
+</pre>
+    </section>
+    <section class="lists">
+        <h2>Sprites</h2>
+        <p>Another brilliant feature of Compass. This will automatically generate both your image sprite (based on a folder of images) and your CSS.</p>
+        <div class="example">
+            <ul>
+                <li><a href="#" class="icons-flickr"></a></li>
+                <li><a href="#" class="icons-delicious"></a></li>
+                <li><a href="#" class="icons-twitter"></a></li>
+                <li><a href="#" class="icons-facebook"></a></li>
+            </ul>
+        </div>
+        <p>Create a relevantly named folder inside your images folder, and copy all your images in to it. then add the below line of code to your main stylesheet where you have declared all your imports (typically style.scss stylesheet.scss or application.scss).</p>
+        <pre class="prettyprint">@import "your_folder_name/*.png";</pre>
+        <p>You can also use <code>@include</code> to define select images from your sprite.</p>
+        <pre class="prettyprint">
+.name_of_image {
+    @include your_folder_name(name_of_image);
+}
+</pre>
+    <h3>Advanced Sprites</h3>
+        <p>Icon Sprites can be further customised.</p>
+        <pre class="prettyprint">
+$icons-spacing: 20px;
+$icons-flickr-spacing: 80px;
+$icons-layout: horizontal;
+$icons-layout: diagonal;
+$icons-layout: smart;
+</pre>
+        <h3>Hover states</h3>
+                <p>If you want to create a hover state for one of your sprites, all you have to do is create another image with the same name, but append '_hover' to the end e.g. 'facebook_hover.png'. Again, the styles are automatically generated.</p>
+    </section>
+    <section class="lists">
+        <h2>Horizontal and vertical lists</h2>
+        <p>This will automatically generate the styles required for your lists and their child elements.</p>
+        <div class="example">
+            <ul>
+                <li><a href="#" class="icons-flickr"></a></li>
+                <li><a href="#" class="icons-delicious"></a></li>
+                <li><a href="#" class="icons-twitter"></a></li>
+                <li><a href="#" class="icons-facebook"></a></li>
+            </ul>
+        </div>
+        <pre class="prettyprint">
+.lists ul {
+    @include horizontal-list;
+    a {
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+}
+</pre>
+    </section>
+    <section>
+        <h2>Vertical Rythm</h2>
+        <p><em>On the Web, vertical rhythm – the spacing and arrangement of text as the reader descends the page – is contributed to by three factors: font size, line height and margin or padding. All of these factors must calculated with care in order that the rhythm is maintained.</em></p>
+        <p>Source: <a title="Compose to a Vertical Rhythm" href="http://24ways.org/2006/compose-to-a-vertical-rhythm" target="_blank">http://24ways.org/2006/compose-to-a-vertical-rhythm</a></p>
+        <div class="example">
+            <h2>Header 1</h2>
+            <h2>Sub Header 1</h2>
+            <h2>Sub Header 2</h2>
+            <div>
+                <p>Be reet god's own county ey up chuffin' nora nobbut a lad. Tintintin gi' o'er wacken thi sen up ah'll gi' thi summat to rooer abaht ne'ermind breadcake. Ah'll learn thi god's own county shurrup dahn t'coil oil tha knows nobbut a lad. Mardy bum cack-handed nay lad ah'll gi' thi summat to rooer abaht shurrup.</p>
+                <p>That's champion cack-handed. Will 'e 'eckerslike. Tha knows will 'e 'eckerslike. What's that when it's at ooam sup wi' 'im how much sup wi' 'im shurrup face like a slapped arse. Tha what sup wi' 'im be reet any rooad be reet. Ah'll gi' thee a thick ear god's own county shu' thi gob. Soft southern pansy wacken thi sen up.</p>
+                <p>Wacken thi sen up nah then nobbut a lad gerritetten what's that when it's at ooam. Aye ah'll gi' thee a thick ear nah then ah'll box thi ears. Is that thine where's tha bin. Soft lad where's tha bin ah'll learn thi ah'll gi' thi summat to rooer abaht t'foot o' our stairs. Breadcake eeh. A pint 'o mild shu' thi gob. Appens as maybe bobbar that's champion. Tha knows gerritetten michael palin ey up any rooad. Nobbut a lad tintintin gerritetten chuffin' nora.</p>
+                <p>A pint 'o mild tha daft apeth will 'e 'eckerslike ne'ermind. Ah'll gi' thi summat to rooer abaht bloomin' 'eck tintintin wacken thi sen up gi' o'er how much. Where there's muck there's brass wacken thi sen up any rooad tha knows a pint 'o mild. Wacken thi sen up wacken thi sen up. Tintintin. Michael palin gi' o'er big girl's blouse aye.</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+    <!-- <script src="js/plugins.js"></script> //-->
+    <!-- <script src="js/main.js"></script> //-->
+</body>
+</html>

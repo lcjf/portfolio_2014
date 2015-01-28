@@ -1,0 +1,88 @@
+@import "base";
+
+* {
+    @include box-sizing(border-box);
+}
+body {
+    background: $gallery; 
+    color: $mine-shaft;
+    @include container(100%);
+    font-family: $primary-font;
+    font-size: 16px;
+}
+a {
+    color: $tory-blue;
+}
+h1,
+h2,
+h3 {
+    margin: $margin-top-bottom;
+    display: inline-block;
+    width: 100%;
+}
+h1
+{
+    margin: $margin-bottom;
+}
+h3 {
+    margin: $margin-top;
+}
+header {
+    @include span(12 of 12);
+    //background:$white; 
+    padding: $padding;
+    font-size: 1.2rem;
+}
+section {
+    @include span(12 of 12);
+    background: $pastel-red;
+    color: $mine-shaft;
+    padding: $padding;
+    &:nth-child(even) {        
+        background: $tory-blue;
+        color: $gallery;
+    }
+    .example {
+        width: 100%;
+        padding: $padding;
+        margin: $margin-top-bottom;
+        border: $dark-border;
+        background: $grey;
+        font-weight: 700;
+        color: $mine-shaft;
+        float: left;
+    }
+    p {
+        display: inline-block;
+    }
+}
+section pre.prettyprint {
+    width: 100%;
+    background: $mine-shaft;
+    float: left;
+}
+.gradient .example {
+    @include background-image(linear-gradient($grey, $grey - 100));
+}
+.border-radius .example {
+    border: $dark-border;
+    @include border-radius(5px);
+}
+.transition .example {
+    cursor: pointer;
+    @include transition-property(all);
+    @include transition-duration(.2s);
+    @include transition-timing-function(ease-in);
+    &:hover {
+        color: $mine-shaft - 100;
+        background: darken($grey, 15%);
+    }
+}
+.lists ul {
+    @include horizontal-list;
+    a {
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+}
