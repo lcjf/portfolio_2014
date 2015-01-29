@@ -6,8 +6,9 @@
 @import "normalize";
 @import "susy";
 @import "compass";
-@import "icons/*.png"; 
+
+@import "icons/*.png";
 @include all-icons-sprites;
 
 @import "main";
-@import "ie";
+@import "ie"; 

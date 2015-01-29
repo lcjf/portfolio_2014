@@ -1,14 +1,51 @@
-@import "base";
+// Vertical Rhythm
+$base-font-size: 18px;
+$base-line-height: 24px;
+@include establish-baseline;
+$default-rhythm-border-style: dashed;
+
+// Misc Colours
+$white: #fff;
+
+// Colour Scheme
+$gallery:#f0f1ee;
+$mine-shaft: #333332;
+$tory-blue: #1352a2;
+$yellow: rgba(255, 212, 100, 1);
+$grey: #c5cbd3;
+$pastel-red: #fb6964;
+
+// Spacing
+$spacing-amount: 1em;
+$margin: $spacing-amount;
+$margin-top:$spacing-amount 0 0;
+$margin-bottom: 0 0 $spacing-amount;
+$margin-top-bottom: $spacing-amount 0;
+$padding:$spacing-amount;
+$padding-bottom: 0 0 $spacing-amount;
+$padding-top:$spacing-amount 0 0;
+$padding-top-bottom: $spacing-amount 0;
+
+// Fonts
+$primary-font: 'Open Sans', sans-serif;
+
+// Misc
+$dark-border: 1px solid $mine-shaft;
 
 * {
     @include box-sizing(border-box);
 }
+.container {
+    display: none;
+    &:nth-of-type(1) {
+        display: block;
+    }
+}
 body {
-    background: $gallery; 
+    background: $yellow; 
     color: $mine-shaft;
-    @include container(100%);
+    @include container(90%);
     font-family: $primary-font;
-    font-size: 16px;
 }
 a {
     color: $tory-blue;
@@ -16,24 +53,49 @@ a {
 h1,
 h2,
 h3 {
-    margin: $margin-top-bottom;
     display: inline-block;
     width: 100%;
 }
-h1
-{
-    margin: $margin-bottom;
+h1 {
+    line-height: 1em; // Shouldn't be needed - fix later
 }
-h3 {
-    margin: $margin-top;
+nav {
+    background: $gallery;
+    @include span(12 of 12);
+    padding: $padding*2 $padding $padding*2 $padding;
+    ul {
+        @include horizontal-list;
+        li {
+            margin: 0 $margin*2 0 0;
+        }
+        .link {
+            color: $mine-shaft;
+            text-decoration: none;
+            font-weight: 700;
+            @include transition-property(all);
+            @include transition-duration(.3s);
+            @include transition-timing-function(ease-in);
+            &:hover {
+                color: $mine-shaft + 80; 
+            }
+        } 
+    }
 }
 header {
     @include span(12 of 12);
     //background:$white; 
     padding: $padding;
-    font-size: 1.2rem;
 }
 section {
+    @include span(12 of 12);
+}
+/* aside {
+    @include span(4 at 9 of 12);
+    background: $grey;
+    padding: $padding;
+    height: 900px;
+} */
+article {
     @include span(12 of 12);
     background: $pastel-red;
     color: $mine-shaft;
@@ -54,9 +116,13 @@ section {
     }
     p {
         display: inline-block;
+        width: 100%;
+    }
+    > :first-child {
+        @include leader();
     }
 }
-section pre.prettyprint {
+article pre.prettyprint {
     width: 100%;
     background: $mine-shaft;
     float: left;
@@ -70,13 +136,7 @@ section pre.prettyprint {
 }
 .transition .example {
     cursor: pointer;
-    @include transition-property(all);
-    @include transition-duration(.2s);
-    @include transition-timing-function(ease-in);
-    &:hover {
-        color: $mine-shaft - 100;
-        background: darken($grey, 15%);
-    }
+    @extend .link;
 }
 .lists ul {
     @include horizontal-list;
@@ -84,5 +144,27 @@ section pre.prettyprint {
         display: block;
         width: 48px;
         height: 48px;
+    }
+}
+.paragraph-one {
+    @include leader();
+}
+.paragraph-two {
+    @include rhythm-borders(2px);
+}
+.paragraph-three {
+    @include adjust-font-size-to(20px);
+}
+.paragraph-four {
+    @include trailer();
+}
+
+// CV
+.skillset {
+    ul {
+        margin: 0;
+        &:last-child {
+            @include trailer();
+        }
     }
 }
