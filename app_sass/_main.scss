@@ -103,6 +103,9 @@ article {
     &:nth-child(even) {        
         background: $tory-blue;
         color: $gallery;
+		a {
+			color: #fff;
+		}
     }
     .example {
         width: 100%;
