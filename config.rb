@@ -1,4 +1,5 @@
 require 'compass/import-once/activate'
+require 'susy'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
@@ -7,6 +8,9 @@ css_dir = "app_stylesheets"
 sass_dir = "app_sass"
 images_dir = "app_graphics"
 javascripts_dir = "app_scripts"
+
+# Enable CSS sourcemaps
+sourcemap = true
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
