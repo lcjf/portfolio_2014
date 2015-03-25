@@ -1,7 +1,16 @@
-.paging-button {
-  visibility: hidden;
+h1 {
+    @include adjust-font-size-to(32px);
+    @include leader();
+    @include trailer();
 }
-
-.button-container {
-  clear: both;
+body * {
+    @include leader();
+    @include trailer();
+}
+button,
+input{
+    @include padding-leader();
+    @include padding-trailer();
+    padding-left: 1em;
+    padding-right: 1em;
 }
