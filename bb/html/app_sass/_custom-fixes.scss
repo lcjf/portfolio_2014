@@ -1,8 +1,0 @@
-/* This custom box sizing mixin overwrites the Compass mixin, it is a fix for the Susy/Compass warnings that are thrown when compiling */ 
-
-@mixin box-sizing($box-model: $default-box-sizing) {
-  @if type-of($box-model) == string {
-    $box-model: unquote($box-model);
-  }
-  @include prefixed-properties(css3-boxsizing, $box-sizing-support-threshold, (box-sizing: $box-model));
-}
