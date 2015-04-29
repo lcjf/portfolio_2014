@@ -1,0 +1,44 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>YouApprove</title>
+	<meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Customisable playlists">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type='text/css'>
+    <link href="app_stylesheets/screen.css" media="screen, projection " rel="stylesheet" type="text/css" />
+    <link href="app_stylesheets/youapprove.css" media="screen, projection " rel="stylesheet" type="text/css" />
+</head>
+  <body>
+    <h1>YouApprove</h1>
+    <div id="login-container" class="pre-auth">This application requires access to your YouTube account.
+      Please <a href="#" id="login-link">authorize</a> to continue.
+    </div>
+    <div id="buttons">
+      <button id="playlist-button" disabled onclick="createPlaylist()">Create a new Public Playlist</button>
+      <br>
+      <label>Current Playlist Id: <input id="playlist-id" value='' type="text"/></label>
+      <br>
+      <label>Video Id: <input id="video-id" value='GZG9G5txtaE' type="text"/></label><button onclick="addVideoToPlaylist()">Add to current playlist</button>
+    </div>
+    <h3>Playlist: <span id="playlist-title"></span></h3>
+    <p id="playlist-description"></p>
+    <div id="playlist-container">
+      <span id="status">No Videos</span>
+    </div>
+      <div id="buttons">
+      <label> <input id="query" value='cats' type="text"/><button id="search-button" disabled onclick="search()">Search</button></label>
+    </div>
+    <div id="search-container">
+    </div>
+      <div id="videos">
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="app_scripts/auth.js"></script>
+    <script src="app_scripts/api_stuff.js"></script>
+    <script src="app_scripts/functions.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+  </body>
+</html>
