@@ -8,8 +8,8 @@ body {
 }
 
 // Vertical Rhythm
-$base-font-size: 16px;
-$base-line-height: 24px;
+$base-font-size: 20px;
+$base-line-height: 28px;
 @include establish-baseline;
 $round-to-nearest-half-line: true;
 $default-rhythm-border-style: dashed;

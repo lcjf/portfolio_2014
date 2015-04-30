@@ -202,7 +202,7 @@
         left: percentage(112px / 500px);
         @include transform(rotate(-13deg));
     }
-    .bottom-white-circle {
+    :nth-child(1) {
         width: percentage(207px / 500px);
         height: percentage(135px / 500px);
         top: percentage(283px / 500px);
@@ -225,7 +225,7 @@
             @include transform(rotate(79deg));
         }
     }
-    .white-middle-circle {
+    :nth-child(2) {
         background: $fg-color;
         width: percentage(105px / 500px);
         height: percentage(81px / 500px);
@@ -247,7 +247,7 @@
             border-radius: 0;
         }
     }   
-    .top-line {
+    :nth-child(3) {
         width: percentage(110px / 500px);
         height: percentage(20px / 500px);
         left: percentage(307px / 500px);
@@ -255,7 +255,7 @@
         border-radius: 0;
         @include transform(rotate(90deg));
     }
-    &:after {
+    :nth-child(4) {
         width: percentage(100px / 500px);
         height: percentage(17px / 500px);
         left: percentage(192px / 500px);
@@ -267,12 +267,25 @@
 
 .facebook {
     @include facebook-logo(6em/*size in pixels, border radius, foreground color, background color*/);
+    @include leader;
+    @include trailer;
 }
 .twitter {
     @include twitter-logo(4em/*size in pixels, border radius, foreground color, background color*/);
+    @include trailer;
 }
 .google-plus {
     @include google-logo(3em/*size in pixels, border radius, foreground color, background color*/);
+    @include trailer;
+}
+
+#social-icons {
+    .prettyprint {
+        width: 100%;
+        margin: 0;
+        float: left;
+        @include leader;
+    }
 }
 
 

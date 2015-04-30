@@ -125,8 +125,8 @@ body {
 
 /* line 106, ../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 100%;
-  line-height: 1.5em;
+  font-size: 125%;
+  line-height: 1.4em;
 }
 
 /* line 34, ../app_sass/_main.scss */
@@ -161,7 +161,7 @@ a {
 
 /* line 49, ../app_sass/_main.scss */
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 
 /* line 52, ../app_sass/_main.scss */
@@ -177,33 +177,33 @@ h4 {
   display: inline-block;
   width: 100%;
   font-weight: 700;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
 }
 
 /* line 65, ../app_sass/_main.scss */
 h1 {
-  font-size: 1.875em;
-  line-height: 1.2em;
+  font-size: 1.5em;
+  line-height: 1.4em;
 }
 
 /* line 68, ../app_sass/_main.scss */
 h2 {
-  font-size: 1.625em;
-  line-height: 1.38462em;
+  font-size: 1.3em;
+  line-height: 1.61538em;
   margin-top: 0;
 }
 
 /* line 72, ../app_sass/_main.scss */
 h3 {
-  font-size: 1.375em;
-  line-height: 1.63636em;
+  font-size: 1.1em;
+  line-height: 1.27273em;
 }
 
 /* line 75, ../app_sass/_main.scss */
 h3 {
-  font-size: 1.125em;
-  line-height: 1.33333em;
+  font-size: 0.9em;
+  line-height: 1.55556em;
 }
 
 /* line 78, ../app_sass/_main.scss */
@@ -213,8 +213,8 @@ nav {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
   padding-right: 1em;
   padding-left: 1em;
 }
@@ -307,8 +307,8 @@ article {
   color: #333332;
   padding-right: 1em;
   padding-left: 1em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
 }
 /* line 123, ../app_sass/_main.scss */
 article:nth-child(even) {
@@ -323,8 +323,8 @@ article:nth-child(even) a {
 article .example {
   width: 100%;
   padding: 1em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
   border: 1px solid #333332;
   background: #c5cbd3;
   font-weight: 700;
@@ -406,30 +406,30 @@ article pre.prettyprint {
 
 /* line 170, ../app_sass/_main.scss */
 .paragraph-one {
-  margin-top: 1.5em;
+  margin-top: 1.4em;
 }
 
 /* line 173, ../app_sass/_main.scss */
 .paragraph-two {
-  border-width: 0.125em;
+  border-width: 0.1em;
   border-style: dashed;
-  padding: 1.375em;
+  padding: 1.3em;
 }
 
 /* line 176, ../app_sass/_main.scss */
 .paragraph-three {
-  font-size: 1.25em;
-  line-height: 1.2em;
+  font-size: 1em;
+  line-height: 1.4em;
 }
 
 /* line 179, ../app_sass/_main.scss */
 .paragraph-four {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 
 /* line 184, ../app_sass/_main.scss */
 .skillset {
-  margin-top: 1.5em;
+  margin-top: 1.4em;
 }
 /* line 186, ../app_sass/_main.scss */
 .skillset ul {
@@ -437,13 +437,13 @@ article pre.prettyprint {
 }
 /* line 188, ../app_sass/_main.scss */
 .skillset ul:last-child {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.4em;
 }
 
 /* line 194, ../app_sass/_main.scss */
 #social-icons p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
   display: inline-block;
 }
 
@@ -456,6 +456,8 @@ article pre.prettyprint {
   border-radius: 5%;
   background: #3b5998;
   overflow: hidden;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
 }
 /* line 9, ../app_sass/_social-icons.scss */
 .facebook:before {
@@ -522,7 +524,7 @@ article pre.prettyprint {
   z-index: 1;
 }
 
-/* line 271, ../app_sass/_social-icons.scss */
+/* line 273, ../app_sass/_social-icons.scss */
 .twitter {
   width: 4em;
   height: 4em;
@@ -530,6 +532,7 @@ article pre.prettyprint {
   background: #2daae1;
   border-radius: 5%;
   position: relative;
+  margin-bottom: 1.4em;
 }
 /* line 74, ../app_sass/_social-icons.scss */
 .twitter:before, .twitter:after, .twitter > div, .twitter > div:before, .twitter > div:after {
@@ -648,7 +651,7 @@ article pre.prettyprint {
   background: #2daae1;
 }
 
-/* line 274, ../app_sass/_social-icons.scss */
+/* line 277, ../app_sass/_social-icons.scss */
 .google-plus {
   width: 3em;
   height: 3em;
@@ -656,6 +659,7 @@ article pre.prettyprint {
   background: #dc4a37;
   border-radius: 5%;
   position: relative;
+  margin-bottom: 1.4em;
 }
 /* line 188, ../app_sass/_social-icons.scss */
 .google-plus:before, .google-plus:after, .google-plus > div:before, .google-plus > div:after, .google-plus > div {
@@ -676,7 +680,7 @@ article pre.prettyprint {
   transform: rotate(-13deg);
 }
 /* line 205, ../app_sass/_social-icons.scss */
-.google-plus .bottom-white-circle {
+.google-plus :nth-child(1) {
   width: 41.4%;
   height: 27%;
   top: 56.6%;
@@ -687,7 +691,7 @@ article pre.prettyprint {
   transform: rotate(-5deg);
 }
 /* line 211, ../app_sass/_social-icons.scss */
-.google-plus .bottom-white-circle:before {
+.google-plus :nth-child(1):before {
   background: #dc4a37;
   width: 66.66667%;
   height: 70.37037%;
@@ -699,7 +703,7 @@ article pre.prettyprint {
   transform: rotate(9deg);
 }
 /* line 219, ../app_sass/_social-icons.scss */
-.google-plus .bottom-white-circle:after {
+.google-plus :nth-child(1):after {
   background: #dc4a37;
   width: 53.1401%;
   height: 69.62963%;
@@ -711,7 +715,7 @@ article pre.prettyprint {
   transform: rotate(79deg);
 }
 /* line 228, ../app_sass/_social-icons.scss */
-.google-plus .white-middle-circle {
+.google-plus :nth-child(2) {
   background: #fff;
   width: 21%;
   height: 16.2%;
@@ -719,7 +723,7 @@ article pre.prettyprint {
   left: 39%;
 }
 /* line 234, ../app_sass/_social-icons.scss */
-.google-plus .white-middle-circle:before {
+.google-plus :nth-child(2):before {
   background: #dc4a37;
   width: 91.42857%;
   height: 127.16049%;
@@ -731,7 +735,7 @@ article pre.prettyprint {
   transform: rotate(-19deg);
 }
 /* line 242, ../app_sass/_social-icons.scss */
-.google-plus .white-middle-circle:after {
+.google-plus :nth-child(2):after {
   width: 104.7619%;
   height: 25.92593%;
   left: 107.61905%;
@@ -739,7 +743,7 @@ article pre.prettyprint {
   border-radius: 0;
 }
 /* line 250, ../app_sass/_social-icons.scss */
-.google-plus .top-line {
+.google-plus :nth-child(3) {
   width: 22%;
   height: 4%;
   left: 61.4%;
@@ -751,7 +755,7 @@ article pre.prettyprint {
   transform: rotate(90deg);
 }
 /* line 258, ../app_sass/_social-icons.scss */
-.google-plus:after {
+.google-plus :nth-child(4) {
   width: 20%;
   height: 3.4%;
   left: 38.4%;
@@ -763,7 +767,15 @@ article pre.prettyprint {
   transform: skew(-55deg) rotate(180deg);
 }
 
-/* line 280, ../app_sass/_social-icons.scss */
+/* line 283, ../app_sass/_social-icons.scss */
+#social-icons .prettyprint {
+  width: 100%;
+  margin: 0;
+  float: left;
+  margin-top: 1.4em;
+}
+
+/* line 293, ../app_sass/_social-icons.scss */
 .dummy {
   position: absolute;
   top: 50px;

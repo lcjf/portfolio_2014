@@ -251,7 +251,8 @@ $base-line-height: 24px;
         </section>
     </div>
     <div id="social-icons" class="container">
-        <p>Social Icons created using pure CSS, that can be resized by changing a single mixin parameter</p>
+        <h1>Social Icons created using SASS</h1>
+        <p>This was a mini side project that I started just for fun. I had seen other people re-create the Facebook and Twitter icons, but the difference with these is the fact that they're responsive (mixin value), and they use less markup</p>
         <div class="facebook">
             <div></div>
         </div>
@@ -262,12 +263,289 @@ $base-line-height: 24px;
             <div></div>
         </div>
         <div class="google-plus">
-            <div class="bottom-white-circle"></div>
-            <div class="white-middle-circle"></div>
-            <div class="v-plus"></div>
-            <div class="top-line"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="dummy"></div>
+        <pre class="prettyprint">
+@mixin facebook-logo($size: 127px, $border-radius: 5%, $fg-color: #fff , $bg-color: #3b5998) {
+    position: relative;
+    display: block;
+    width: $size;
+    height: $size;
+    border-radius: 5%;
+    background: $bg-color;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        background: #3b5998;
+        width: percentage(560px / 500px);
+        height: percentage(530px / 500px);
+        top: percentage(75px / 500px);
+        left: percentage(267px / 500px);
+        border-radius: 17%;
+        background: $fg-color;
+        z-index: 1;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: $size;
+        top: 0;
+        height: $size;
+        background: $bg-color;
+        right: percentage(295px / 500px);
+        width: 500px;
+        z-index: 1;
+    }
+    div {
+        top: 0;
+        left: 0;
+        width: $size;
+        height: $size;
+        background: $bg-color;
+        content: "";
+        position: absolute;
+        left: percentage(424px / 500px);
+        z-index: 1;
+    }
+    div:before {
+        background: $fg-color;;
+        content: "";
+        position: absolute;
+        width: percentage(219px / 500px);
+        top: percentage(231px / 500px);
+        z-index: 2;
+        height: percentage(75px / 500px);
+        right: percentage(506px / 500px);
+        @include transform(skew(-8deg));
+    }
+    div:after {
+        content: "";
+        position: absolute;
+        background: $bg-color;
+        height: $size;
+        right: percentage(23px / 500px);
+        width: percentage(560px / 500px);
+        top: percentage(147px / 500px);
+        border-radius: 5%;
+        z-index: 1;
+    }
+}   
+
+@mixin twitter-logo($size: 500px, $border-radius: 5%, $fg-color: #fff , $bg-color: #2daae1) {
+    width: $size;
+    height: $size;
+    overflow: hidden;
+    background: $bg-color;
+    border-radius: $border-radius;
+    position: relative;
+    &:before,
+    &:after,
+    & > div,
+    & > div:before,
+    & > div:after {
+        content: "";
+        background: $fg-color;
+        border-radius: 50%;
+        position: absolute;
+    }
+    &:before {
+        top: percentage(-3px / 500px);
+        left: percentage(-23px / 500px);
+        width: percentage(417px / 500px);
+        height: percentage(400px / 500px);
+    }
+    :nth-child(1) {
+        top: percentage(75px / 500px);
+        left: percentage(-57px / 500px);
+        width: percentage(290px / 500px);
+        height: percentage(290px / 500px);
+        background: $bg-color;
+        &:before {
+            top: percentage(108px / 290px);
+            left: percentage(164px / 290px);
+            width: percentage(150px / 290px);
+            height: percentage(150px / 290px);
+        }
+        &:after {
+            top: percentage(-22px / 290px);
+            left: percentage(60px / 290px);
+            width: percentage(230px / 290px);
+            height: percentage(230px / 290px);
+            background: $bg-color;
+        }
+    }
+    :nth-child(2) {
+        top: percentage(132px / 500px);
+        left: percentage(84px / 500px);
+        width: percentage(150px / 500px);
+        height: percentage(150px / 500px);
+        background: $fg-color;
+        &:before {
+            top: percentage(-193px / 150px);
+            left: percentage(-84px / 150px);
+            width: percentage(280px / 150px);
+            height: percentage(280px / 150px);
+            background: $bg-color;
+        }
+        &:after {
+            top: percentage(-52px / 150px);
+            left: percentage(1px / 150px);
+            width: percentage(150px / 150px);
+            height: percentage(150px / 150px);
+        }
+    }
+    :nth-child(3) {
+        top: percentage(80px / 500px);
+        left: percentage(85px / 500px);
+        width: percentage(150px / 500px);
+        height: percentage(150px / 500px);
+        background: $fg-color;
+        &:before {
+            top: percentage(-314px / 150px);
+            left: percentage(-40px / 150px);
+            width: percentage(430px / 150px);
+            height: percentage(430px / 150px);
+            background: $bg-color;
+        }
+        &:after {
+            top: percentage(25px / 150px);
+            left: percentage(161px / 150px);
+            width: percentage(148px / 150px);
+            height: percentage(148px / 150px);
+            background: $fg-color;
+            z-index: 1;
+        }
+    }
+    :nth-child(4) {
+        top: percentage(1px / 500px);
+        left: percentage(292px / 500px);
+        width: percentage(150px / 500px);
+        height: percentage(180px / 500px);
+       &:before {
+            top: percentage(-31px / 180px);
+            left: percentage(17px / 150px);
+            width: percentage(162px / 150px);
+            height: percentage(180px / 180px);
+            background: $bg-color;
+        }
+        &:after {
+            top: percentage(-20px / 180px);
+            left: percentage(-14px / 150px);
+            width: percentage(150px / 150px);
+            height: percentage(180px / 180px);
+            background: $fg-color;
+        }
+    }
+    &:after {
+        top: percentage(-248px / 500px);
+        left: percentage(143px / 500px);
+        width: percentage(380px / 500px);
+        height: percentage(380px / 500px);
+        background: $bg-color;
+    }
+}
+
+@mixin google-logo($size: 500px, $border-radius: 5%, $fg-color: #fff , $bg-color: #dc4a37) {
+    width: $size;
+    height: $size;
+    overflow: hidden;
+    background: $bg-color;
+    border-radius: $border-radius;
+    position: relative;
+    &:before,
+    &:after,
+    & > div:before,
+    & > div:after,
+    & > div {
+        content:"";
+        background: $fg-color;
+        border-radius: 50%;
+        position: absolute;
+    }        
+    &:before {
+        width: percentage(173px / 500px);
+        height: percentage(149px / 500px);
+        top: percentage(85px / 500px);
+        left: percentage(112px / 500px);
+        @include transform(rotate(-13deg));
+    }
+    :nth-child(1) {
+        width: percentage(207px / 500px);
+        height: percentage(135px / 500px);
+        top: percentage(283px / 500px);
+        left: percentage(90px / 500px);
+        @include transform(rotate(-5deg));
+        &:before {
+            background: $bg-color;
+            width: percentage(138px / 207px);
+            height: percentage(95px / 135px);
+            left: percentage(41px / 207px);
+            top: percentage(18px / 135px);
+            @include transform(rotate(9deg));
+        }
+        &:after {
+            background: $bg-color;
+            width: percentage(110px / 207px);
+            height: percentage(94px / 135px);
+            left: percentage(72px / 207px);
+            top: percentage(-169px / 135px);
+            @include transform(rotate(79deg));
+        }
+    }
+    :nth-child(2) {
+        background: $fg-color;
+        width: percentage(105px / 500px);
+        height: percentage(81px / 500px);
+        top: percentage(215px / 500px);
+        left: percentage(195px / 500px);
+        &:before {
+            background: $bg-color;
+            width: percentage(96px / 105px);
+            height: percentage(103px / 81px);
+            left: percentage(43px / 105px);
+            top: percentage(-13px / 81px);
+            @include transform(rotate(-19deg));
+        }
+        &:after {
+            width: percentage(110px / 105px);
+            height: percentage(21px / 81px);
+            left: percentage(113px / 105px);
+            top: percentage(8px / 81px);
+            border-radius: 0;
+        }
+    }   
+    :nth-child(3) {
+        width: percentage(110px / 500px);
+        height: percentage(20px / 500px);
+        left: percentage(307px / 500px);
+        top: percentage(223px / 500px);
+        border-radius: 0;
+        @include transform(rotate(90deg));
+    }
+    :nth-child(4) {
+        width: percentage(100px / 500px);
+        height: percentage(17px / 500px);
+        left: percentage(192px / 500px);
+        top: percentage(84px / 500px);
+        border-radius: 0;
+        @include transform(skew(-55deg) rotate(180deg));
+    }
+}
+
+.facebook {
+    @include facebook-logo(6em/*size in pixels, border radius, foreground color, background color*/);
+}
+.twitter {
+    @include twitter-logo(4em/*size in pixels, border radius, foreground color, background color*/);
+}
+.google-plus {
+    @include google-logo(3em/*size in pixels, border radius, foreground color, background color*/);
+}        
+        </pre>
     </div>
     <!-- <aside>
        <div class="content">
