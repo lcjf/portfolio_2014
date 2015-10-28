@@ -38,6 +38,6 @@ Thumbs.db
 
 #Custom#
 ########
-.sass-cache/
+.sass-cache/*/**
 app_stylesheets/style.css
 app_stylesheets/style.css.map
